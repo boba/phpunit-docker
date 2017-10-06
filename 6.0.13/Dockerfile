@@ -44,7 +44,7 @@ RUN apk --no-cache add \
     && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php --install-dir=/usr/bin --filename=composer \
     && php -r "unlink('composer-setup.php');" \
-    && composer require "phpunit/phpunit:~6.0.6" --prefer-source --no-interaction \
+    && composer require "phpunit/phpunit:~6.0.13" --prefer-source --no-interaction \
     && composer require "phpunit/php-invoker" --prefer-source --no-interaction \
     && composer require --dev "phpunit/dbunit" --prefer-source --no-interaction \ 
     && ln -s /tmp/vendor/bin/phpunit /usr/local/bin/phpunit \
